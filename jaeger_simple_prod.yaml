@@ -13,14 +13,14 @@ spec:
       es:
         server-urls: https://i-o-optimized-deployment-b90928.es.us-west1.gcp.cloud.es.io:9243
         username: elastic
-        password: mtz6rC4Fdsbu1IXVejDJpp6T
+        password: <password>
   storage:
     type: elasticsearch
     options:
       es:
         server-urls: https://i-o-optimized-deployment-b90928.es.us-west1.gcp.cloud.es.io:9243
         username: elastic
-        password: mtz6rC4Fdsbu1IXVejDJpp6T
+        password: <password>
   # query:
   #   type: elasticsearch
   #   options:
