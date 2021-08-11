@@ -1,0 +1,47 @@
+apiVersion: jaegertracing.io/v1
+kind: Jaeger
+metadata:
+  name: simple-prod
+spec:
+  strategy: production
+  collector:
+    resources:
+      limits:
+        cpu: 100m
+        memory: 128Mi
+    options:
+      es:
+        server-urls: https://i-o-optimized-deployment-b90928.es.us-west1.gcp.cloud.es.io:9243
+        username: elastic
+        password: mtz6rC4Fdsbu1IXVejDJpp6T
+  storage:
+    type: elasticsearch
+    options:
+      es:
+        server-urls: https://i-o-optimized-deployment-b90928.es.us-west1.gcp.cloud.es.io:9243
+        username: elastic
+        password: mtz6rC4Fdsbu1IXVejDJpp6T
+  # query:
+  #   type: elasticsearch
+  #   options:
+  #     es:
+  #       server-urls: https://i-o-optimized-deployment-b90928.es.us-west1.gcp.cloud.es.io:9243
+  #       username: elastic
+  #       password: mtz6rC4Fdsbu1IXVejDJpp6T
+# spec:
+#   strategy: <deployment_strategy>
+#   collector:
+#     options: {}
+#     resources: {}
+#   sampling:
+#     options: {}
+#   storage:
+#     type:
+#     options: {}
+#   query:
+#     options: {}
+#     resources: {}
+#   ingester:
+#     options: {}
+#     resources: {}
+#   options: {}
