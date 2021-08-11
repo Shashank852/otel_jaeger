@@ -2,6 +2,7 @@
 This repo consists k8s templates to create otel collector along with Jaeger prod setup
 
 Jaeger Operator for Kubernetes
+
 The Jaeger Operator is an implementation of a Kubernetes Operator.
 
 Getting started
@@ -21,11 +22,6 @@ kubectl create -n observability -f https://raw.githubusercontent.com/Shashank852
 
 kubectl create -n observability -f https://raw.githubusercontent.com/Shashank852/otel_jaeger/main/jaeger_operator.yaml
 
-The operator will activate extra features if given cluster-wide permissions. To enable that, run:
-
-kubectl create -f https://raw.githubusercontent.com/jaegertracing/jaeger-operator/master/deploy/cluster_role.yaml
-
-kubectl create -f https://raw.githubusercontent.com/jaegertracing/jaeger-operator/master/deploy/cluster_role_binding.yaml
 
 Note that you'll need to download and customize the cluster_role_binding.yaml if you are using a namespace other than observability. You probably also want to download and customize the operator.yaml, setting the env var WATCH_NAMESPACE to have an empty value, so that it can watch for instances across all namespaces.
 
